@@ -1,10 +1,10 @@
 let numb=Number(prompt('Введите число-->'));
-if ((typeof numb)==='number'){
+if (typeof numb ==='number' && !isNaN(numb)){
     if (numb%2==0){
-        console.log('Число чётное!');
+        alert('Число чётное!');
     }else if (numb%2==1){
-        console.log('Число нечётное');
-    }else {
-        console.log('Упс, кажется, вы ошиблись');
+        alert('Число нечётное');
     }
+} else {
+    alert('Упс, кажется, вы ошиблись');
 }

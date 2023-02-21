@@ -1,14 +1,17 @@
-let x = NaN;
-if ((typeof x)==='number'){
-    if ((x*1)==x){
-        console.log('x - число');
-    }else{
-        console.log('Тип x не определён');
+let variable = NaN;
+const typeOfVariable=typeof variable; 
+if (isNaN(variable)==false){
+    switch (typeOfVariable){
+        case 'number':
+            console.log('variable - число');
+            break;
+        case 'string':
+            console.log('variable - строка');
+            break;
+        case 'boolean':
+            console.log('variable - логическая пепременная');
+            break;
     }
-} else if ((typeof x)==='string'){
-    console.log('x - строка');
-} else if ((typeof x)==='boolean'){
-    console.log('x - логическая пепременная');
 }else{
-    console.log('Тип x не определён');
+        console.log('Тип variable не определён');
 }
